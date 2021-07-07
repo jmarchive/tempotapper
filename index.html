@@ -67,14 +67,14 @@
                 if((now - lasttime)/1000 >= 60/tempo*resetvalue.value){
                     updates = -1;
                     tempo = 0;
-                    tap.innerText = "TAP"
-                    detail.innerText = "已重置，点击TAP按钮以开始";
+                    document.getElementById("tap").innerText = "TAP"
+                    document.getElementById("detail").innerText = "已重置，点击TAP按钮以开始";
                 }
                 else{
                     lasttime = now;
                     tempo = 60/((now - starttime)/1000/updates);
-                    tap.innerText = Math.round(tempo);
-                    detail.innerText = tempo;
+                    document.getElementById("tap").innerText = Math.round(tempo);
+                    document.getElementById("detail")..innerText = tempo;
                 }
             }
             updates++;
@@ -88,20 +88,20 @@
                 updates = 0;
                 tempo = 0;
                 tap.innerText = "TAP";
-                detail.innerText = "已重置，点击TAP按钮以开始";
+                document.getElementById("detail").innerText = "已重置，点击TAP按钮以开始";
             }
         };
         function updatereset(){
-            resets.innerText = resetvalue.value;
+            document.getElementById("resets").innerText = resetvalue.value;
         }
         document.onkeyup = function(e){
             if(e.keyCode == 37){
                 e.preventDefault();
-                resetvalue.value -= 0.1
+                document.getElementById("resetvalue").value -= 0.1
             }
             else if(e.keyCode == 39){
                 e.preventDefault();
-                resetvalue.value += 0.1
+                document.getElementById("resetvalue").value += 0.1
             }
         };
         </script>
