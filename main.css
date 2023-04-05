@@ -1,0 +1,46 @@
+﻿*{
+    outline: none;
+}
+button{
+    font-size: 3rem;
+    background-color: #3b50ec;
+    color: white;
+    padding: .75rem;
+    border: none;
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition-property: background-color, color;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+*:focus-visible{
+    outline: solid .125rem #cbcff1;
+}
+button:hover{
+    background-color: #4555cc;
+}
+button:active{
+    background-color: #3546ca;
+    color: gold;
+    transition-duration: .1s;
+}
+div{
+    padding-top: 10vh;
+    text-align: center;
+}
+p{
+    padding: .625rem;
+    font-size: larger;
+}
+#result{
+    padding-top: 2rem;
+    font-size: x-large;
+}
+#resets, #resets2{
+    text-decoration: underline black;
+}
+input{
+    width: min(90vw, 20rem);
+}
